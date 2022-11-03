@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ssunsonmicrosoftpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ssunsonmicrosoftpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: ssunsonmicrosoftpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ssunsonmicrosoftpipelinesjavascriptdocker 
+          image: mycontainerregistryakss.azurecr.io/ssunsonmicrosoftpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
